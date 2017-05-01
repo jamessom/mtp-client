@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Teste de Conceito 1</title>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="exercise">
+            <!-- 1) Preencher <p> abaixo com meu nome e idade - usando Interpolação -->
+            <p>VueJS é muito massa! - {{nome}} ({{idade}})</p>
+            <!-- 2) Apresentar sua idade, multiplicada por 3 -->
+            <p>{{ idade * 3 }}</p>
+            <!-- 3) Chamar uma função que apresente um número de ponto flutuante randômico entre 0 e 1 (Math.random()) -->
+            <p>{{ randomNumber() }}</p>
+            <!-- 4) Busque qualquer imagem no Google e apresnete qui via binding no atributo "src" -->
+            <div>
+                <img v-bind:src="srcImage" style="width:100px;height:100px">
+            </div>
+            <!-- 5) Pre-popule esse input com seu nome (usando atributo "value") -->
+            <div>
+                <input type="text" v-bind:value="nome">
+            </div>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#exercise',
+                data: {
+                    nome:     "Jamessom Queiroz",
+                    idade:    "27",
+                    srcImage: "https://s-media-cache-ak0.pinimg.com/originals/50/07/cd/5007cd679fabbb5310d8507253c2be21.gif",
+                },
+                methods: {
+                    randomNumber: function(){
+                        return Math.random();
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
