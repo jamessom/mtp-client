@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Vuejs 2</title>
+        <script src="vue.js"></script>
+    </head>
+    <body>
+        <h1>Primeiros passos com a Lib Vuejs</h1>
+
+        <div id="app">
+            <p>{{ chamada }}</p>
+            <p>
+                Qualquer coisa que eu digitar <input type="text" v-on:input="criarTextoEmbaixo" placeholder="aqui"> vai aparecer embaixo.
+            </p>
+            <p>{{ criaTexto }}</p>
+        </div>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    chamada: "Chamada feita com Vue!",
+                    criaTexto : "Criar texto aqui embaixo"
+                },
+                methods: {
+                    criarTextoEmbaixo: function(evento){
+                        this.criaTexto = evento.target.value;
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
