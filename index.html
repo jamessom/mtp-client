@@ -8,26 +8,45 @@
         <script src="vue.js"></script>
     </head>
     <body>
-        <h1>Primeiros passos com a Lib Vuejs</h1>
-
         <div id="app">
-            <p>{{ chamada }}</p>
+            <h1 v-once>{{ imprimeTitulo() }}</h1>
+
+            <p>{{ chamadaViaMethodo() }}</p>
             <p>
                 Qualquer coisa que eu digitar <input type="text" v-on:input="criarTextoEmbaixo" placeholder="aqui"> vai aparecer embaixo.
             </p>
             <p>{{ criaTexto }}</p>
+            <p>Seu eu precisar de um <a v-bind:href="linkAqui" target="_blank">link</a> eu uso junto com a diretiva v-bind</p>
+            <hr>
+            <!--
+                Por padrão o Vue faz o parse e sanitize das strings html,
+                então se essa abordagem for necessária em algum momento é
+                interessante que seja feito com planejamento.
+            -->
+            <p v-html="userComCuidade"></p>
         </div>
 
         <script>
             new Vue({
                 el: '#app',
                 data: {
-                    chamada: "Chamada feita com Vue!",
-                    criaTexto : "Criar texto aqui embaixo"
+                    titulo:         "Primeiros passos com a Lib Vuejs",
+                    chamada:        "Chamada feita com Vue!",
+                    criaTexto:      "Criar texto aqui embaixo",
+                    linkAqui:       "http://google.com.br",
+                    userComCuidade: "<a href='http://google.com.br' target='_blank'>Google</a>",
                 },
                 methods: {
                     criarTextoEmbaixo: function(evento){
                         this.criaTexto = evento.target.value;
+                    },
+                    chamadaViaMethodo: function(){
+                        titulo: "Primeiros passos com a Lib Vuejs"
+                        return "A chamada agora é via método";
+                    },
+                    imprimeTitulo: function(){
+                        this.titulo = "Não vai aparecer se o v-once não estiver ativado";
+                        return this.titulo;
                     }
                 }
             });
