@@ -1,5 +1,5 @@
-# Estudos VueJS2
+# VueJS
 
-Estudos com a lib VueJS 2
+Estudos VueJS
 
 ![VueJS](https://i.ytimg.com/vi/DsuTwV0jwaY/maxresdefault.jpg)
