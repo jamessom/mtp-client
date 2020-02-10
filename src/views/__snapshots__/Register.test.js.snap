@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/views/Register.vue should renders correctly 1`] = `
+<section
+  class="section"
+>
+  <div
+    class="columns"
+  >
+    <div
+      class="column"
+    >
+      <h1>
+        Pré-cadastro de Torcedor
+      </h1>
+       
+      <input-base-stub
+        controlclass="control"
+        inputclass="input"
+        inputtype="text"
+        label="Nome completo"
+        placeholder="Por favor informe seu nome completo"
+      />
+       
+      <gender-select-stub
+        label="Sexo"
+        options="[object Object],[object Object],[object Object],[object Object]"
+      />
+       
+      <input-base-stub
+        controlclass="control"
+        inputclass="input"
+        inputtype="text"
+        label="Email"
+        placeholder="Por favor informe seu email"
+        type="email"
+      />
+       
+      <input-base-stub
+        controlclass="control"
+        inputclass="input"
+        inputtype="text"
+        label="Repetir e-mail"
+        placeholder="Por faver informe seu email novamente"
+        type="email"
+      />
+       
+      <gender-select-stub
+        label="Tipo de documento"
+        options="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+      />
+       
+      <input-base-stub
+        controlclass="control"
+        inputclass="input"
+        inputtype="text"
+        label="Número do documento"
+        placeholder="Por favor informe o número do documento selecionado"
+      />
+       
+      <input-base-stub
+        controlclass="control"
+        inputclass="input"
+        inputtype="text"
+        label="Senha"
+        placeholder="Por favor informe uma senha"
+        type="password"
+      />
+       
+      <input-base-stub
+        controlclass="control"
+        inputclass="input"
+        inputtype="text"
+        label="Repetir senha"
+        placeholder="Por favor informe sua senha novamente"
+        type="password"
+      />
+    </div>
+  </div>
+</section>
+`;

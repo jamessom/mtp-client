@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/components/GenderSelect.vue when component is mounted should renders correctly 1`] = `
+<div
+  class="field"
+>
+  <label
+    class="label"
+  >
+    
+  </label>
+   
+  <div
+    class="control is-expanded"
+  >
+    <div
+      class="select is-fullwidth"
+    >
+      <select />
+    </div>
+  </div>
+</div>
+`;

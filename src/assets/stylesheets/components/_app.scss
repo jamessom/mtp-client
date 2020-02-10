@@ -1,0 +1,19 @@
+#app {
+  font-family: $base-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $base-color;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: $base-color;
+
+    &.router-link-exact-active {
+      color: $active-link;
+    }
+  }
+}
