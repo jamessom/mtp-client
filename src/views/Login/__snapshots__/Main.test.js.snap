@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`src/views/Login.vue should renders correctly 1`] = `
+exports[`src/views/Login/Main.vue should renders correctly 1`] = `
 <section
   class="section"
 >

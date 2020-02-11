@@ -1,7 +1,7 @@
 import componentFactory from '@/__mocks__/componentFactory';
-import Login from './Login.vue';
+import Login from './Main.vue';
 
-describe('src/views/Login.vue', () => {
+describe('src/views/Login/Main.vue', () => {
   const factory = componentFactory({
     component: Login,
   });
