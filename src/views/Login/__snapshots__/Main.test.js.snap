@@ -2,79 +2,37 @@
 
 exports[`src/views/Login/Main.vue should renders correctly 1`] = `
 <section
-  class="section"
+  class="hero is-link is-fullheight is-bold"
 >
   <div
-    class="columns"
+    class="hero-body"
   >
     <div
-      class="column is-4 is-offset-4"
+      class="column is-desktop is-three-fifths is-offset-one-fifth"
     >
-      <div
-        class="field"
-      >
-        <p
-          class="control has-icons-left has-icons-right"
+      <form>
+        <input-base-stub
+          controlclass="control"
+          inputclass="input"
+          inputplaceholder="Email"
+          inputtype="email"
+          label=""
+        />
+         
+        <input-base-stub
+          controlclass="control"
+          inputclass="input"
+          inputplaceholder="Password"
+          inputtype="password"
+          label=""
+        />
+         
+        <button
+          class="button is-success"
         >
-          <input
-            class="input"
-            placeholder="Email"
-            type="email"
-          />
-           
-          <span
-            class="icon is-small is-left"
-          >
-            <i
-              class="fas fa-envelope"
-            />
-          </span>
-           
-          <span
-            class="icon is-small is-right"
-          >
-            <i
-              class="fas fa-check"
-            />
-          </span>
-        </p>
-      </div>
-       
-      <div
-        class="field"
-      >
-        <p
-          class="control has-icons-left"
-        >
-          <input
-            class="input"
-            placeholder="Password"
-            type="password"
-          />
-           
-          <span
-            class="icon is-small is-left"
-          >
-            <i
-              class="fas fa-lock"
-            />
-          </span>
-        </p>
-      </div>
-       
-      <div
-        class="field"
-      >
-        <p
-          class="control"
-        >
-          <button
-            class="button is-success"
-          >
-            Login
-          </button>
-        </p>
-      </div>
+          Login
+        </button>
+      </form>
     </div>
   </div>
 </section>

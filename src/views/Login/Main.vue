@@ -1,34 +1,25 @@
 <template>
-  <section class="section">
-    <div class="columns">
-      <div class="column is-4 is-offset-4">
-        <div class="field">
-          <p class="control has-icons-left has-icons-right">
-            <input class="input" type="email" placeholder="Email">
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-check"></i>
-            </span>
-          </p>
-        </div>
+  <section class="hero is-link is-fullheight is-bold">
+    <div class="hero-body">
+      <div class="column is-desktop is-three-fifths is-offset-one-fifth">
+        <form @submit.prevent="onSubmit()">
+          <input-base inputType='email' label="" :inputPlaceholder="`Email`" />
+          <input-base inputType='password' label="" :inputPlaceholder="`Password`" />
 
-        <div class="field">
-          <p class="control has-icons-left">
-            <input class="input" type="password" placeholder="Password">
-            <span class="icon is-small is-left">
-              <i class="fas fa-lock"></i>
-            </span>
-          </p>
-        </div>
-
-        <div class="field">
-          <p class="control">
-            <button class="button is-success">Login</button>
-          </p>
-        </div>
+          <button class="button is-success">Login</button>
+        </form>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+import InputBase from '@/components/InputBase.vue';
+
+export default {
+  name: 'Main',
+  components: {
+    InputBase,
+  },
+};
+</script>
