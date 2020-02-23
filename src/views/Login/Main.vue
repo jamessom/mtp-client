@@ -3,8 +3,8 @@
     <div class="hero-body">
       <div class="column is-desktop is-three-fifths is-offset-one-fifth">
         <form @submit.prevent="onSubmit()">
-          <input-base inputType='email' label="" :inputPlaceholder="`Email`" />
-          <input-base inputType='password' label="" :inputPlaceholder="`Password`" />
+          <input-base inputType='email' :inputPlaceholder="`Email`" v-model="email" />
+          <input-base inputType='password' :inputPlaceholder="`Password`" v-model="password" />
 
           <button class="button is-success">Login</button>
         </form>
@@ -17,7 +17,13 @@
 import InputBase from '@/components/InputBase.vue';
 
 export default {
-  name: 'Main',
+  name: 'Login',
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
   components: {
     InputBase,
   },
