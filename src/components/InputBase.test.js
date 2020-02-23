@@ -5,15 +5,31 @@ import InputBase from './InputBase.vue';
 describe('src/components/InputBase.vue', () => {
   describe('when component is mounted', () => {
     const snapshotTest = componentFactory({ component: InputBase });
+    const wrapper = snapshotTest.wrapper();
 
-    it('should renders correctly', () => {
-      expect(snapshotTest.wrapper().element).toMatchSnapshot();
+    it('should be a vue instance', () => {
+      expect(wrapper.isVueInstance()).toBeTruthy();
+    });
+
+    it('should be a InputBase component', () => {
+      expect(wrapper.name()).toBe('InputBase');
+    });
+
+    it('should renders input element by default', () => {
+      expect(wrapper.contains('input')).toBeTruthy();
+    });
+
+    it('should have a control class', () => {
+      expect(wrapper.classes()).toContain('field');
+    });
+
+    it('should renders html correctly', () => {
+      expect(wrapper.html()).toMatchSnapshot();
     });
   });
 
   describe('create componente with default props', () => {
     const propsData = {
-      label: faker.random.word(),
       inputPlaceholder: faker.random.words(),
     };
 
@@ -24,24 +40,26 @@ describe('src/components/InputBase.vue', () => {
       },
     });
 
-    it('should create a input component with label text', () => {
-      expect(factory.wrapper().props().label).toBe(propsData.label);
+    const wrapperProps = factory.wrapper().props();
+
+    it('should create a input component with default label', () => {
+      expect(wrapperProps.label).toBe('');
     });
 
     it('should create a input component with default type', () => {
-      expect(factory.wrapper().props().inputType).toBe('text');
+      expect(wrapperProps.inputType).toBe('text');
     });
 
     it('should create a input component with placeholder text', () => {
-      expect(factory.wrapper().props().inputPlaceholder).toBe(propsData.inputPlaceholder);
+      expect(wrapperProps.inputPlaceholder).toBe(propsData.inputPlaceholder);
     });
 
     it('should create a input component with default control class', () => {
-      expect(factory.wrapper().props().controlClass).toBe('control');
+      expect(wrapperProps.controlClass).toBe('control');
     });
 
     it('should create a input component with default input class', () => {
-      expect(factory.wrapper().props().inputClass).toBe('input');
+      expect(wrapperProps.inputClass).toBe('input');
     });
   });
 

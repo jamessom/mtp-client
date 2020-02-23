@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-    <label class="label">{{ this.label }}</label>
+    <label v-if="this.label" class="label">{{ this.label }}</label>
 
     <div :class="this.controlClass">
       <input :class="this.inputClass" :type="this.inputType" :placeholder="this.inputPlaceholder" />
@@ -12,7 +12,10 @@
 export default {
   name: 'InputBase',
   props: {
-    label: String,
+    label: {
+      type: String,
+      default: '',
+    },
     inputType: {
       type: String,
       default: 'text',
