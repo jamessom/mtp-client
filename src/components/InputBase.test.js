@@ -81,24 +81,26 @@ describe('src/components/InputBase.vue', () => {
       },
     });
 
+    const wrapperProps = factory.wrapper().props();
+
     it('should create a input component with label text', () => {
-      expect(factory.wrapper().props().label).toBe(propsData.label);
+      expect(wrapperProps.label).toBe(propsData.label);
     });
 
     it('should create a input component with type', () => {
-      expect(factory.wrapper().props().inputType).toBe(propsData.inputType);
+      expect(wrapperProps.inputType).toBe(propsData.inputType);
     });
 
     it('should create a input component with placeholder text', () => {
-      expect(factory.wrapper().props().inputPlaceholder).toBe(propsData.inputPlaceholder);
+      expect(wrapperProps.inputPlaceholder).toBe(propsData.inputPlaceholder);
     });
 
     it('should create a input component with control class', () => {
-      expect(factory.wrapper().props().controlClass).toBe(propsData.controlClass);
+      expect(wrapperProps.controlClass).toBe(propsData.controlClass);
     });
 
     it('should create a input component with input class', () => {
-      expect(factory.wrapper().props().inputClass).toBe(propsData.inputClass);
+      expect(wrapperProps.inputClass).toBe(propsData.inputClass);
     });
   });
 });
