@@ -1,39 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`src/views/Login/Main.vue should renders correctly 1`] = `
-<section
-  class="hero is-link is-fullheight is-bold"
+<div
+  class="columns is-centered is-vcentered"
 >
   <div
-    class="hero-body"
+    class="column is-3 is-offset-0"
   >
     <div
-      class="column is-desktop is-three-fifths is-offset-one-fifth"
+      class="container"
     >
-      <form>
-        <input-base-stub
-          controlclass="control"
-          inputclass="input"
-          inputplaceholder="Email"
-          inputtype="email"
-          label=""
+      <div
+        class="has-text-centered"
+      >
+        <img
+          class="login-logo"
+          src=""
         />
-         
-        <input-base-stub
-          controlclass="control"
-          inputclass="input"
-          inputplaceholder="Password"
-          inputtype="password"
-          label=""
-        />
-         
-        <button
-          class="button is-success"
+      </div>
+       
+      <input-base-stub
+        controlclass="control"
+        inputclass="input"
+        inputtype="email"
+        label="E-mail"
+        value=""
+      />
+       
+      <input-base-stub
+        controlclass="control"
+        inputclass="input"
+        inputtype="password"
+        label="Senha"
+        value=""
+      />
+       
+      <div
+        class="has-text-centered is-pulled-right"
+      >
+        <a
+          class="button is-vcentered is-primary is-outlined"
         >
           Login
-        </button>
-      </form>
+        </a>
+      </div>
+       
+      <div
+        class="is-vcentered is-pulled-left"
+      >
+        <a
+          href="/register"
+        >
+          
+          Você não tem uma conta? 
+          <br />
+          
+          Crie uma agora
+        
+        </a>
+      </div>
     </div>
   </div>
-</section>
+</div>
 `;
